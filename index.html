@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+      />
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city.."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+                id = "cityInput"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                id = "citySearch"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
+        <h1 id="cityName">
+          New York
+        </h1>
+        <ul>
+          <li id="date">
+            Monday 2:00, Cloudy
+          </li>
+          <li>
+            Rain <span id="cityRain">85</span>%, Wind <span id="cityWind">27</span>mph
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                alt="Cloudy icon"
+                class="weather-icon float-left"
+              />
+              <div class="float-left">
+                <span id="temp" class="temperature">85</span
+                ><span class="units"> <a href="#" id="fahrenheit">°F</a> /</span>
+                <span class="units"> <a href="#" id="celsius">°C</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="clearfix">
+              <div class="seven-day-container">
+                <div class="row row-cols-7">
+                  <div class="col">
+                    <div class="row day">
+                      <div class="col">
+                        Monday
+                      </div>
+                    </div>
+                    <div class="row emoji">
+                      <div class="col">
+                      ☀️
+                      </div>
+                    </div>
+                    <div class="row degrees">
+                      <div class="col">
+                        <span class="temp">
+                          90&deg;
+                        </span>
+                        <span class="temp">
+                          70&deg;
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row day">
+                      <div class="col">
+                        Tuesday
+                      </div>
+                    </div>
+                    <div class="row emoji">
+                      <div class="col">
+                        🌧️
+                      </div>
+                    </div>
+                    <div class="row degrees">
+                      <div class="col">
+                        <span class="temp">
+                          90&deg;
+                        </span>
+                        <span class="temp">
+                          70&deg;
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row day">
+                      <div class="col">
+                        Wednesday
+                      </div>
+                    </div>
+                    <div class="row emoji">
+                      <div class="col">
+                        ☁️
+                      </div>
+                    </div>
+                    <div class="row degrees">
+                      <div class="col">
+                        <span class="temp">
+                          90&deg;
+                        </span>
+                        <span class="temp">
+                          70&deg;
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row day">
+                      <div class="col">
+                        Thursday
+                      </div>
+                    </div>
+                    <div class="row emoji">
+                      <div class="col">
+                        🌩️
+                      </div>
+                    </div>
+                    <div class="row degrees">
+                      <div class="col">
+                        <span class="temp">
+                          90&deg;
+                        </span>
+                        <span class="temp">
+                          70&deg;
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row day">
+                      <div class="col">
+                        Friday
+                      </div>
+                    </div>
+                    <div class="row emoji">
+                      <div class="col">
+                        ☀️
+                      </div>
+                    </div>
+                    <div class="row degrees">
+                      <div class="col">
+                        <span class="temp">
+                          90&deg;
+                        </span>
+                        <span class="temp">
+                          70&deg;
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row day">
+                      <div class="col">
+                        Saturday
+                      </div>
+                    </div>
+                    <div class="row emoji">
+                      <div class="col">
+                        ☀️
+                      </div>
+                    </div>
+                    <div class="row degrees">
+                      <div class="col">
+                        <span class="temp">
+                          90&deg;
+                        </span>
+                        <span class="temp">
+                          70&deg;
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row day">
+                      <div class="col">
+                        Sunday
+                      </div>
+                    </div>
+                    <div class="row emoji">
+                      <div class="col">
+                        🌩️
+                      </div>
+                    </div>
+                    <div class="row degrees">
+                      <div class="col">
+                        <span class="temp">
+                          90&deg;
+                        </span>
+                        <span class="temp">
+                          70&deg;
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
