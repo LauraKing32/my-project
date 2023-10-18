@@ -43,24 +43,27 @@
         </h1>
         <ul>
           <li id="date">
-            Monday 2:00, Cloudy
-          </li>
+            Monday 2:00, <span id="description">Cloudy</span>          </li>
           <li>
             Rain <span id="cityRain">85</span>%, Wind <span id="cityWind">27</span>mph
+            <span class="units"> 
           </li>
         </ul>
         <div class="row">
           <div class="col-6">
             <div class="clearfix">
-              <img
+              <img 
+                id="weatherIcon"
                 src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
                 alt="Cloudy icon"
                 class="weather-icon float-left"
               />
               <div class="float-left">
-                <span id="temp" class="temperature">85</span
-                ><span class="units"> <a href="#" id="fahrenheit">°F</a> /</span>
-                <span class="units"> <a href="#" id="celsius">°C</a></span>
+                <span id="temp" class="temperature">85</span>
+                <span class="units"> 
+                  <a href="#" id="fahrenheit" class="active">°F</a>
+                  |
+                  <a href="#" id="celsius">°C</a></span>
               </div>
             </div>
           </div>
@@ -229,9 +232,10 @@
             </div>
           </div>
         </div>
+        <div class="footnote">
+          <a href="https://github.com/LauraKing32/my-project" target="_blank">Open-source code</a>
+          by Laura King 
+        </div>
     <script src="src/index.js"></script>
-        <br />
-    <a href="https://github.com/LauraKing32/my-project/tree/main/src" target="_blank">Open-source code</a>
-    , by Laura King
- </body>
+  </body>
 </html>

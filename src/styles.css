@@ -46,6 +46,17 @@ li {
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
+  visibility: visible;
+}
+
+.active {
+  color: #000;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #000;
 }
 
 .units {
@@ -71,4 +82,10 @@ li {
 .emoji {
   font-size: 40px;
   text-align: center;
+}
+
+.footnote {
+  float: left;
+  margin-top: 20px;
+  font-size: 12px;
 }
